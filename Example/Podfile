@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LBApi_Example' do
+  pod 'LBApi', :path => '../'
+
+  target 'LBApi_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
