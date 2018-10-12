@@ -1,0 +1,6 @@
+framework module Pods_LBApi_Example {
+  umbrella header "Pods-LBApi_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

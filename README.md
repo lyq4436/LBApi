@@ -22,7 +22,7 @@ pod 'LBApi'
 
 ## Author
 
-872472634@qq.com, blin@onlyou.com
+872472634@qq.com, linbo_vip1987@163.com
 
 ## License
 

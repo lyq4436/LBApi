@@ -1,0 +1,45 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - LBApi (0.0.1):
+    - AFNetworking (~> 3.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - LBApi (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  LBApi:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LBApi: 02acc6b18ea439b5945fdc9277a8639740fb47f4
+
+PODFILE CHECKSUM: 17b5c2a461253fb7d5b445498b560401299d63d4
+
+COCOAPODS: 1.5.3

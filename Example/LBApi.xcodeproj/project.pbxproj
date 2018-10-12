@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0983F3AF6CBFE3A4BF193415 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0983F3AF6CBFE3A4BF193415 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1B5F87A567B6A513CE37A9F9 /* Pods-LBApi_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBApi_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBApi_Example/Pods-LBApi_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3DBF57208B46DDDBC6C7FFED /* Pods_LBApi_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBApi_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E87ABF18AFE718D291139AF /* Pods_LBApi_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBApi_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,8 +64,8 @@
 		6367B2777842B700E2AA03A7 /* Pods-LBApi_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBApi_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBApi_Tests/Pods-LBApi_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1229F7CEBA9B97FA3D28827 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B0F21E49F77E6936B4B5D4EF /* LBApi.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LBApi.podspec; path = ../LBApi.podspec; sourceTree = "<group>"; };
+		A1229F7CEBA9B97FA3D28827 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B0F21E49F77E6936B4B5D4EF /* LBApi.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LBApi.podspec; path = ../LBApi.podspec; sourceTree = "<group>"; };
 		F07B3BDA6AE31541EA2635E8 /* Pods-LBApi_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBApi_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBApi_Example/Pods-LBApi_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +95,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E52231C216F5AE10002ADBA /* MVVMBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MVVMBase;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +139,7 @@
 		6003F593195388D20070C39A /* Example for LBApi */ = {
 			isa = PBXGroup;
 			children = (
+				5E52231C216F5AE10002ADBA /* MVVMBase */,
 				6003F59C195388D20070C39A /* LBAppDelegate.h */,
 				6003F59D195388D20070C39A /* LBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -248,7 +256,11 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "872472634@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 694Y57FHRD;
+					};
 					6003F5AD195388D20070C39A = {
+						ProvisioningStyle = Automatic;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -320,10 +332,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LBApi_Example/Pods-LBApi_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/LBApi/LBApi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBApi.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,12 +518,15 @@
 			baseConfigurationReference = F07B3BDA6AE31541EA2635E8 /* Pods-LBApi_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 694Y57FHRD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LBApi/LBApi-Prefix.pch";
 				INFOPLIST_FILE = "LBApi/LBApi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_SWIFT_SYMBOLS = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -519,12 +536,15 @@
 			baseConfigurationReference = 1B5F87A567B6A513CE37A9F9 /* Pods-LBApi_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 694Y57FHRD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LBApi/LBApi-Prefix.pch";
 				INFOPLIST_FILE = "LBApi/LBApi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_SWIFT_SYMBOLS = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -534,6 +554,9 @@
 			baseConfigurationReference = 47E0B9927937E31F794E35D8 /* Pods-LBApi_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -548,6 +571,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBApi_Example.app/LBApi_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -558,6 +582,9 @@
 			baseConfigurationReference = 6367B2777842B700E2AA03A7 /* Pods-LBApi_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -568,6 +595,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBApi_Example.app/LBApi_Example";
 				WRAPPER_EXTENSION = xctest;
 			};

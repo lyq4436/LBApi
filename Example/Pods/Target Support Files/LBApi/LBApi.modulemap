@@ -1,0 +1,6 @@
+framework module LBApi {
+  umbrella header "LBApi-umbrella.h"
+
+  export *
+  module * { export * }
+}
