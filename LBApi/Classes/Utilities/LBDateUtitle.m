@@ -45,7 +45,7 @@
 +(NSString *)getNowTimeTimestampWithPreciseString{
     NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
     NSTimeInterval time=[date timeIntervalSince1970];
-    NSString *timeString = [NSString stringWithFormat:@"%.0f", time];
+    NSString *timeString = [NSString stringWithFormat:@"%f", time];
     return timeString;
 }
 
